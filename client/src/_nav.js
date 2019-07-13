@@ -1,7 +1,7 @@
 export default {
   items: [
     {
-      name: 'Standard Users MERN',
+      name: 'Standard MERN',
       url: '/dashboard',
       icon: 'icon-speedometer',
       badge: {
@@ -10,7 +10,7 @@ export default {
       },
     },
     {
-      name: 'Reminders',
+      name: 'Users',
       url: '/users',
       icon: 'icon-drop',
     },

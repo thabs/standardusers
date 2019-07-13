@@ -35,7 +35,7 @@ class Users extends Component {
           <Col>
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i> Reminders
+                <i className="fa fa-align-justify"></i> Users
               </CardHeader>
               <CardBody>
                 <h5><strong>Click on User to Edit</strong></h5>
@@ -43,9 +43,9 @@ class Users extends Component {
                 <Table responsive hover>
                   <thead>
                     <tr>
-                      <th scope="col">FirstName</th>
-                      <th scope="col">LastName</th>
-                      <th scope="col">CellPhone</th>
+                      <th scope="col">First Name</th>
+                      <th scope="col">Last Name</th>
+                      <th scope="col">Cell Phone</th>
                     </tr>
                   </thead>
                   <tbody>

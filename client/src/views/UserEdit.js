@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Card, CardHeader, CardBody, Button, Form, FormGroup, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Row, Col, Container, Card, CardHeader, CardBody, Button, Form, FormGroup, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
@@ -140,4 +140,10 @@ const validationSchema = function (values) {
   })
 }
 
-export default connect(null,{updateUser, deleteUser})(UserEdit);
+function mapStateToProps(state) {
+  return {
+    users: state.users
+  };
+}
+
+export default connect(mapStateToProps,{updateUser, deleteUser})(UserEdit);
