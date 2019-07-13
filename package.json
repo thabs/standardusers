@@ -1,0 +1,16 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "start": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.6.1",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "sequelize": "^5.10.0",
+    "tedious": "^6.2.0"
+  }
+}
