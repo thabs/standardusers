@@ -27,11 +27,12 @@ module.exports.updateUser = async (req, res) => {
 
     const user = await User.update(
       { firstName, lastName, cellPhone }, 
-      { where: { Id: userId} }
+      { where: { id: userId} }
     ); 
 
     return res.status(200).send(user);     
   }catch(err){
+    console.log(err.message);
     res.status(400).send(err.message);
   }
 };
@@ -49,7 +50,7 @@ module.exports.deleteUser = async (req, res) => {
   try{
     const { userId } = req.params;
     
-    await User.destroy({ where: { Id: userId} });
+    await User.destroy({ where: { id: userId} });
     return res.send({Id: userId});
   }catch(err){
     return res.send(err.message);

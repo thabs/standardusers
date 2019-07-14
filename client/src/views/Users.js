@@ -7,13 +7,13 @@ import { Button, Card, CardBody, CardHeader, CardFooter, Col, Row, Table } from 
 import { fetchUsers } from '../actions/users';
 
 function UserRow(props) {
-  const { key, user } = props;
+  const { user } = props;
   const userLink = `/users/edit/${user.id}`;
 
-  const { firstName, lastName, cellPhone } = user;
+  const { id, firstName, lastName, cellPhone } = user;
 
   return (
-    <tr key={key}>
+    <tr key={id.toString()}>
       <td><Link to={userLink}>{firstName}</Link></td>
       <td><Link to={userLink}>{lastName}</Link></td>
       <td><Link to={userLink}>{cellPhone}</Link></td>

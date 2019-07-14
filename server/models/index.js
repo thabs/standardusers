@@ -6,14 +6,28 @@ var Sequelize = require('sequelize');
 var basename  = path.basename(__filename);
 var db        = {};
 
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USERNAME, process.env.DB_PASSWORD, {
-  host: process.env.DB_SERVERNAME,
+
+const sequelize = new Sequelize('userDb', 'thabiso-admin', 'CyberPro2019', {
+  host: 'thabiso-server.database.windows.net',
   dialect: 'mssql',
-  port : 1433,
   dialectOptions: {
-      encrypt : true   // This is important if you are using Azure.
-  } 
+    options: {
+      encrypt: true,
+      requestTimeout: 30000 // timeout = 30 seconds
+    }
+  }
 });
+
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log('Azure DB Connection has been established successfully.');
+  })
+  .catch(err => {
+    console.error('Unable to connect to the Azure database:', err);
+  });
+
+
 
 fs
   .readdirSync(__dirname)

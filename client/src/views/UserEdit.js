@@ -46,8 +46,8 @@ class UserEdit extends Component {
           </ModalBody>
         <ModalFooter>
         { error ?
-          <Button color="secondary" onClick={() => this.props.history.push('/')}>Ok</Button>: 
-          <Button color="secondary" onClick={() => this.setState({ modal: false })}>Ok</Button>
+          <Button color="secondary" onClick={() => this.setState({ modal: false })}>Ok</Button>:
+          <Button color="secondary" onClick={() => this.props.history.push('/users')}>Ok</Button>
         }
         </ModalFooter>
       </Modal>
@@ -56,7 +56,7 @@ class UserEdit extends Component {
 
   async onSubmit(values, { setSubmitting }) {    
     try{
-      const { id } = this.props.user;
+      const { id } = this.state.user;
 
       setSubmitting(true);
       await this.props.updateUser(id, values);

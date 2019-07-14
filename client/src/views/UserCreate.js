@@ -30,7 +30,7 @@ class UserCreate extends Component {
         <ModalFooter>
         { error ? 
           <Button color="secondary" onClick={() => this.setState({ modal: false })}>Ok</Button>:
-          <Button color="secondary" onClick={() => this.props.history.push('/')}>Ok</Button>
+          <Button color="secondary" onClick={() => this.props.history.push('/users')}>Ok</Button>
         }
         </ModalFooter>
       </Modal>
@@ -58,7 +58,7 @@ class UserCreate extends Component {
           {renderMultipleFields(userFields, props)}
           <FormGroup>
             <Button type="submit" color="primary" className="mr-1" disabled={isSubmitting || !isValid}>{isSubmitting ? 'Wait...' : 'Submit'}</Button>{' '}
-            <Button type="reset" color="danger" className="mr-1" onClick={() => this.props.history.push('/')}>Cancel</Button>
+            <Button type="reset" color="danger" className="mr-1" onClick={() => this.props.history.push('/users')}>Cancel</Button>
           </FormGroup>  
         </Form>
       </Container>

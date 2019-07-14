@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
         },
         firstName: DataTypes.STRING,
         lastName: DataTypes.STRING,
-        cellphone: DataTypes.STRING
+        cellPhone: DataTypes.STRING
     });
     
     return user;

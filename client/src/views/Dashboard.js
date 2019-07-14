@@ -4,11 +4,12 @@ class Dashboard extends Component {
   render() {
     return (
       <div className="animated fadeIn">
-        <h4>Standard Users</h4>
+        <h3>Standard Users</h3>
         <br/>
-        <h5>- APP is a complete MERN</h5>
-        <h5>- APP USES MS SQL On Azure</h5>
-        <h5>- To Create User, click on menu on Sidebar</h5>
+        <h4>=> DB: MS SQL On Azure</h4>
+        <h4>=> To Create/Edit User, click on Users on Sidebar</h4>
+        <h5>  - To Edit User, click on user on Table, update and Submit</h5>
+        <h5>  - To Delete User, click on user on Table, then Delete</h5>
         <br/>
         <h5>Developer: Thabiso Sekhoto</h5>
       </div>
