@@ -13,7 +13,12 @@ import { renderMultipleFields } from '../helpers/formField';
 import userFields from '../helpers/data/userFields';
 
 class UserCreate extends Component {
-  state = { modal: false, message:null, error: null };
+  constructor(props){
+    super(props);
+
+    this.state = { modal: false, message:null, error: null };
+    this.CreateUserForm = this.CreateUserForm.bind(this);
+  }
 
   renderModal(){
     const { modal, message, error } = this.state;
